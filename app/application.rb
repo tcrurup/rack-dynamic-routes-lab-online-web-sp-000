@@ -10,7 +10,6 @@ class Application
     
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
-      binding.pry
       self.class.items.detect{ |item| item.name == item_name }.price
     else
       resp.write "Route not found"
