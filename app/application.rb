@@ -10,5 +10,7 @@ class Application
     else
       resp.write "404"
     end
+    
+    resp.finish
   end
 end
