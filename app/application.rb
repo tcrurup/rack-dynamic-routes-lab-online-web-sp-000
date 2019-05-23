@@ -8,7 +8,8 @@ class Application
     if req.path.match(/items/)
       item_name = req.path.split(/items/).last
     else
-      resp.write "404"
+      resp.write "Route not found"
+      resp.status = 404
     end
     
     resp.finish
