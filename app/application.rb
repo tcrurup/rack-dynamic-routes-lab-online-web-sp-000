@@ -8,7 +8,7 @@ class Application
     
     if req.path.match(/items/)
       item_name = req.path.split(/items/).last
-      self.class.items.detect{ |item| item.name == item_name
+      self.class.items.detect{ |item| item.name == item_name }.price
     else
       resp.write "Route not found"
       resp.status = 404
